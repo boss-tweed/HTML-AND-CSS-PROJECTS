@@ -10,4 +10,10 @@ td:hover {
 tr, th {
 	background: gold;
 	color: darkviolet;
+	text-align: center;
 } 
+
+h1	{
+		text-align: center;
+		color: darkviolet;
+}
