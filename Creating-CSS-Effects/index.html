@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Creating Effects with CSS</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap">
+</head>
+
+</html>
+
+<body>
+    <!--NAVBAR-->
+    <nav class="nav-bar">
+        <ul>
+            <li>
+                <a href="#">HOME</a>
+            </li>
+            <li class="drop">
+                <a href="#">Images</a>
+                <div class="rollover-menu">
+                    <a href="#image1">Image 1</a>
+                    <a href="#image2">Image 2</a>
+                    <a href="#image3">Image 3</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <!--IMAGES-->
+    <section>
+        <!--IMAGE ONE-->
+        <div class="image-container" id="image1">
+            <img src="images/Zelda.webp">
+            <div class="overlay"></div>
+        </div>
+        <!--IMAGE TWO-->
+        <div class="image-container" id="image2">
+            <img src="images/princess-zelda-ultimate-art.png" class="zoom">
+        </div>
+        <!--IMAGE THREE-->
+        <div class="image-container" id="image3">
+            <div class="circle">
+                <img src="images/link-png.png">
+            </div>
+        </div>
+    </section>
+    <!--FOOTER-->
+    <footer>
+        <div class="footer-text">
+            <p>The Tech Academy &copy;</p>
+        </div>
+    </footer>
+</body>
