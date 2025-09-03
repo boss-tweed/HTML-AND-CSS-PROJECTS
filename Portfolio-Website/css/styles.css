@@ -1,0 +1,316 @@
+/*FONTS*/
+
+/*Audiowide font from fonts.google.com (Primary)*/
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+/*Titillium Web font from fonts.google.com (secondary*/
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+/*OVERALL STYLING*/
+
+body{
+    margin: 0%; /*Confirms webpage displays all the way to
+    all edges*/
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+h1{
+    font-family: "Audiowide", sans-serif; /*Font from fonts.google.com*/
+    font-weight: 400;
+    text-transform: uppercase; /*Displays in all caps*/
+    text-align: center;
+    margin-top: 5%; /*Slight margin above element*/
+    color: rgb(11, 11, 11);
+}
+
+h1:hover{
+    filter: grayscale(10%); /*Adds minor gray shade to text*/
+    transform: scale(1.3); /*increases scale of element when hovered over*/
+    transition: transform 1.5s; /*Duration of scale transform*/
+}
+
+/*Style for title text*/
+.white-text{
+    color: azure;
+}
+
+/*Paragraph elements styling*/
+p{
+    font-family: "Titillium Web", sans-serif; /*Font from
+    fonts.google.com*/
+    font-weight: 400;
+    text-align: justify; /*Adjust space between words/characters
+    to make them fill full width of line*/
+    letter-spacing: 1px; /*slight space between characters*/ 
+    font-size: 20px;
+    /*Adds padding to left/right*/
+    padding-left: 20px;
+    padding-right: 20px; /*(May increase padding to the edge side of text)*/
+}
+
+p:hover{
+    transition: transform 1.5s; /*Duration of scale transform*/
+    transform: scale(1.03); /*increases scale of element when hovered over*/
+}
+
+/*Applies to all elements w/ center class*/
+.center{
+    text-align: center; /*Centers text w/ assigned class*/
+}
+
+/*Hover effect for center class - Applies to quote, GitHub and footer*/
+.center:hover{
+    transition: transform 1.5s; /*Duration of transform*/
+    transform: scale(1.03); /*Increases the scale when hovered over*/
+}
+
+/*Links*/
+a{
+    color: darkblue; /*All links will be this color*/
+}
+
+/*Quote*/
+q{
+    font-style: italic; /*Makes element italicized*/
+}
+
+/*Image*/
+img{
+    filter: grayscale(50%); /*Adds medium gray shade over element*/
+    border-radius: 10px; /*Rounds corners of element*/
+    max-width: 100%; /*Keeps images within the width of container*/
+    height: 340px; 
+    display: block;
+    margin-left: auto; /*In junction of right, it is meant to center 
+    all images*/
+    margin-right: auto;
+}
+
+img:hover{
+    filter: none; /*Reduces grayscale to 0%*/
+    transition: transform 1.5s; /*Duration of transform*/
+    transform: scale(1.3); /*Increases scale of element when
+    hovered over*/
+}
+
+/*Rule used to apply a change in scale for elements when viewed on a
+smaller screen like a smartphone*/
+@media screen and (max-width: 576px){
+    img{
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+/*Styling of footer element*/
+footer{
+    padding: 2%; /*Footer padding equal to 2% of width of the element*/
+    background-color: rgb(11, 11, 11);
+}
+
+footer p{
+    color: azure;
+}
+
+/*END OF OVERALL*/
+
+/*NAVBAR*/
+
+.navbar{
+    overflow: hidden;
+    background-color: rgb(11, 11, 11);
+    position: fixed; /*Stays at top of screen no matter how far
+    down you scroll*/
+    top: 0; /*No space above nav is visible*/
+    width: 100%; /*Spans the entire width of page*/
+    z-index: 1; /*Stays atop page elements as you scroll*/
+    -webkit-animation: movenav 5s; /*Applies animation for 
+    Safari browser 4.0 - 8.0*/
+    animation: movenav 5s; /*Applies same animation; all other browsers*/
+}
+
+/*effect for moving navbar from the left of the screen*/
+@keyframes movenav{
+    from {left: -100vw;} /*Starting off to the left*/
+    to {left: 0vw;} /*Moves navbar into place on screen*/
+}
+
+.navbar a{
+    float: left; /*Places links to left of the page*/
+    display: block; /*Links will display in a single line*/
+    color: azure;
+    padding: 14px 16px;
+    text-decoration: none; /*No underline on text*/
+    font-family: "Audiowide", sans-serif; /*Font from fonts.google.com*/
+    font-size: 20px;
+    text-align: center; /*Centers within the container*/
+    position: relative; /*Sets relative to its normal position with the 
+    animation applied below*/
+    -webkit-animation: movenavtext 5.75s; /*For Safari browser 4.0 - 8.0*/
+    animation: movenavtext 5.75s; /*Applies animation for the declared duration*/
+}
+
+@keyframes movenavtext{
+    from {top: -100vw;} /*Sets text above the viewport 100%*/
+    to {top: 0vw;} /*Lowers text onto the navbar*/
+}
+
+/*For screens like that of a smartphone*/
+@media screen and (max-width: 576px){
+    .navbar a{
+        width: 25%; /*Makes each line take only a .25 of the navbar*/
+        font-size: 12px;
+    }
+}
+
+/*Hover effets*/
+.navbar a:hover{
+    background-color: azure; /*Background of text when hovered over*/
+    color: rgb(11, 11, 11); /*Text color when hovered over*/
+    font-weight: bold;
+}
+
+/*END OF NAVBAR*/
+
+/*VIDEO*/
+
+#coding_video{
+    position: fixed;
+    right: 0; /*No spcae between edge of video 
+    and of page*/
+    bottom: 0; /*No space between bottom of 
+    video and of page*/
+    min-width: 100%; /*Displays across full width of page*/
+    z-index: -1; /*Places video behind all other elements*/
+}
+
+/*Rule applied so video will display on smaller screens
+like that of a smartphone*/
+@media screen and (max-width: 576px){
+    #coding_video{
+        display: none;
+    }
+}
+
+.vid_text{
+    background: rgba(0, 0, 0, 0.5); /*Semi-transparent outline for text*/
+    color: azure;
+    width: 100%; /*Fills to width of video container*/
+    padding: 20px; /*Adds padding around text*/
+    position: relative; /*Sets to relative of its normal position allowing for
+    following animation*/
+    -webkit-animation: movevidtext 5.75s;
+    animation: movevidtext 5.75s;
+}
+
+/*Causes overlay text to move up from bottom of page upon load*/
+@keyframes movevidtext{
+    from {top: -100vw;} /*Sets position of text to above viewport*/
+    to {top: 0vw;} /*Sets to normal position on viewport*/
+}
+
+/*END OF VIDEO*/
+
+/*TABLE/COLUMNS*/
+
+/*Universal selector; applies all effects to elements on the page*/
+*{
+    box-sizing: border-box; /*Creates box with border, with which we
+    will place most of the text*/
+}
+
+.column_1{
+    float: left;
+    width: 50%; /*Takes up half the page width*/
+    padding: 10px;
+    padding-top: 0%; /*Space between column and headings*/
+    height: 450px; /*Sets height of column (may need to be adjusted based on amount of text)*/
+    background-color: #edb53b;
+}
+
+/*For screens 576px and smaller, like that of a smartphone*/
+@media screen and (max-width: 576px){
+    .column_1{
+        overflow: auto;
+    }
+}
+
+.column_2{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 3%; 
+    height: 450px; 
+    background-color: #b53bed;
+}
+
+/*This class applies to the contact form column giving it more room for the inputs*/
+.column_tall{
+    padding-top: 1%; 
+    height: 450px; 
+}
+
+.column_git{
+    padding-top: 4%; /*Override to help center the github text*/
+}
+
+/*Creates insert for content after selected element (this being .row)*/
+.row:after{
+    content: ""; /*Leaving blank, allows the footer to be displayed w/o 
+    overwriting a column*/
+    display: table; /*Specifies how this value shall be treated. Like a table*/
+    clear: both; /*Clears any elements from floating left or right of an element*/
+}
+
+/*END OF TABLE/COLUMNS*/
+
+/*CONTACT FORM*/
+
+/*input for text in boxes*/
+input[type="text"]{
+    width: 100%; /*Box cover full width of container*/
+    padding: 12px;
+    border: 2px solid rgb(195, 203, 203); /*Border/outline of the boxes*/
+    border-radius: 5px; /*rounds the corners of the boxes*/
+    box-sizing: border-box; /*Creates a box w/ a border around inputs*/
+    margin-top: 6px; /*Adds margin to top of box*/
+    margin-bottom: 16px; /*Adds margin to bottom of box*/
+    resize: vertical; /*Allows a vertical resize by user*/
+    font-family: "Titillium Web", sans-serif; /*Font from
+    fonts.google.com*/
+    font-weight: bold;
+}
+
+input[type="text"]:hover{
+    box-shadow: 0 0 5px #710ca0; /*Creates hue/shadow on border when hovering over*/
+}
+
+/*Style and effects for Submit button*/
+input[type="submit"]{
+    background-color: #b53bed; /*Sets the color for the button itself*/
+    color: azure; /*Sets the color of the text in the button*/
+    padding: 8px 20px; /*Gives padding to all sides to give space between edge
+    of element  and input boxes*/
+    border-radius: 5px; /*Gives rounded edges*/
+    cursor: pointer;
+    display: block; /*Centers button in combo w/ margin left/right*/
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Audiowide", sans-serif; /*Font from fonts.google.com*/
+}
+
+input[type="submit"]:hover{
+    background-color: #710ca0; /*Changes shade of color when hovered over*/
+    transform: scale(1.2); /*Increases scale of button when hovered over*/
+    transition: transform 1.5s; /*Duration of time for transform to complete*/
+}
+
+/*Form element*/
+form{
+    border-radius: 5px; /*Rounds edges of element*/
+    padding: 8px; 
+    font-family: "Audiowide", sans-serif; /*Font from fonts.google.com*/
+}
+
+/*END OF CONTACT FORM*/
