@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap'); /*Font from 
+fonts.google.com*/
+
+body{
+    background-color: darkslateblue;
+}
+
+/*NAVBAR*/
+
+/*Fixes position of an styles navbar bar*/
+.navbar{
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0; /*positions navbar at top of page*/
+    width: 100%; /*Full width*/
+    z-index: 1; /*Places navbar bar over content 
+    when scrolled*/
+    margin-left: -8px;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    margin: -8px -8px 0px -8px;
+}
+
+/*Links/text inside navbar*/
+a{
+    float: left;
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    padding: 18px;
+    text-decoration: none;
+    font-family: "UnifrakturCook", cursive;
+    font-size: 20px;
+}
+
+/*Styles hover effect when scrolling over links*/
+a:hover{
+    background: rgb(203, 190, 190);
+    color: black;
+}
+
+/*Image*/
+
+/*Centers the image in middle of page and adss padding/margins*/
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 33%;
+}
+
+img{
+    width: 750px;
+    height: 500px;
+    border-radius: 10px;
+    filter: contrast(150%) saturate(120%);
+}
+
+
+/*Centers text placed on top of image and styles it*/
+.centered{
+    position: absolute;
+    top: 35%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    font-family: "UnifrakturCook", cursive;
+    font-size: 38px;
+}
+
+/*FOOTER*/
+
+/*Styles and places the footer on the bottom of the 
+page in the center*/
+footer{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    width: 100%;
+}
+
+td{
+    width: 46.7%;
+}
+
+td p{
+    font-family: "UnifrakturCook", cursive;
+    font-weight: 400;
+    font-size: 20px;
+}
+
